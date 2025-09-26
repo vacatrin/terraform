@@ -1,4 +1,16 @@
 # Always make use of docs from https://registry.terraform.io/browse/providers
+terraform {
+    required_providers {
+        aws = {
+        source  = "hashicorp/aws"
+        version = "~> 6.0"
+        }
+        github = {
+          source  = "integrations/github"
+          version = "~> 6.0"
+        }
+    }
+}
 
 # always need to specify a provider
 provider "aws" {
@@ -7,7 +19,7 @@ provider "aws" {
 }
 
 # always need to provide resource from the provider
-resource "aws_instance" "my_ec2_instance_2" {
+resource "aws_instance" "my_ec2_instance" {
   ami = "ami-0444794b421ec32e4"
   instance_type = "t2.micro"
   subnet_id = "subnet-0cdf86daa1eb620ea"

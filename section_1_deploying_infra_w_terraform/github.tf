@@ -1,13 +1,9 @@
-terraform {
-  required_providers {
-    github = {
-      source  = "integrations/github"
-      version = "~> 6.0"
-    }
-  }
-}
+# # Configure the GitHub Provider
+# I added the
+# terraform {
+#   required_providers {...}
+# part in the other file, as it is required only once per project.
 
-# Configure the GitHub Provider
 provider "github" {
   token = var.github_token
 }
