@@ -1,4 +1,9 @@
-# Configure the GitHub Provider
+# # Configure the GitHub Provider
+# I added the
+# terraform {
+#   required_providers {...}
+# part in the other file, as it is required only once per project.
+
 provider "github" {
   token = var.github_token
 }
