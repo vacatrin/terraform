@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 variable "my_map_var" {
-  type = map()
+  type = map
   default = {
     name = "Victor",
     city = "Berlin",
