@@ -6,3 +6,7 @@ variable "github_token" {
     type        = string
     sensitive   = true
 }
+
+variable "ec2_ami" {
+  default = "a_default_ami_id" # in case I have no values added in a *.tfvars file
+}
