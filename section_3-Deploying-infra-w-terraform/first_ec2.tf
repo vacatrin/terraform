@@ -20,7 +20,7 @@ provider "aws" {
 
 # always need to provide resource from the provider
 resource "aws_instance" "my_ec2_instance" {
-  ami = "ami-0444794b421ec32e4"
+  ami = var.ec2_ami
   instance_type = "t2.micro"
   subnet_id = "subnet-0cdf86daa1eb620ea"
   tags = {
